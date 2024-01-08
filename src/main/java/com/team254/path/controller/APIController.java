@@ -34,9 +34,9 @@ public class APIController {
         for (String pointString : message.split(";")) {
             String[] pointData = pointString.split(",");
 
-            int x = pointData[0].equals("NaN") ? 0 : Integer.parseInt(pointData[0]);
-            int y = pointData[1].equals("NaN") ? 0 : Integer.parseInt(pointData[1]);
-            int heading = pointData[2].equals("NaN") ? 0 : Integer.parseInt(pointData[2]);
+            double x = (pointData[0].equals("NaN") ? 0 : Double.parseDouble(pointData[0]));
+            double y = (pointData[1].equals("NaN") ? 0 : Double.parseDouble(pointData[1]));
+            double heading = pointData[2].equals("NaN") ? 0 : Double.parseDouble(pointData[2]);
 
             points.add(new Pose2d(new Translation2d(x, y), Rotation2d.fromDegrees(heading)));
         }

@@ -409,8 +409,8 @@ function addPoint() {
 	if (waypoints.length > 0) prev = waypoints[waypoints.length - 1].translation;
 	else prev = new Translation2d(50, 50);
 	$("tbody").append("<tr>" + "<td class='drag-handler'></td>"
-        + "<td class='x'><input type='number' value='" + (prev.x + 50) + "'></td>"
-        + "<td class='y'><input type='number' value='" + (prev.y + 50) + "'></td>"
+        + "<td class='x'><input type='number' value='" + (prev.x + 1) + "'></td>"
+        + "<td class='y'><input type='number' value='" + (prev.y + 1) + "'></td>"
         + "<td class='heading'><input type='number' value='0'></td>"
         + "<td class='comments'><input type='search' placeholder='Comments'></td>"
         + "<td class='enabled'><input type='checkbox' checked></td>"
@@ -446,8 +446,8 @@ function update() {
 	waypoints = [];
 	let data = "";
 	$('tbody').children('tr').each(function() {
-		let x = parseFloat($($($(this).children()).children()[0]).val());
-        let y = parseFloat($($($(this).children()).children()[1]).val());
+        let x = parseFloat($($($(this).children()).children()[0]).val()) * 39.3701;
+        let y = parseFloat($($($(this).children()).children()[1]).val()) * 39.3701;
         let heading = parseFloat($($($(this).children()).children()[2]).val());
 		if (isNaN(heading)) {
 			heading = 0;
