@@ -8,15 +8,22 @@ let wto;
 let change = "propertychange change click keyup input paste";
 let animating = false;
 
-const fieldWidth = 886; // inches
-const fieldHeight = 360; // inches
-const xOffset = 120;
-const yOffset = 180;
-const width = 1604; //pixels
-const height = 651; //pixels
+const fieldWidth = (54 * 12) + (3.25); // inches
+const fieldHeight = (26 * 12) + (11.25); // inches
+const xOffset = 87;
+const yOffset = 15;
+const width = 1656; //pixels
+const height = 715; //pixels
 
-const robotWidth = 28; // inches
-const robotHeight = 33; // inches
+// const fieldWidth = 886; // inches
+// const fieldHeight = 360; // inches
+// const xOffset = 221;
+// const yOffset = 681;
+// const width = 1604; //pixels
+// const height = 651; //pixels
+
+const robotWidth = 26 + 3.25; // inches
+const robotHeight = 26 + 3.25; // inches
 
 const waypointRadius = 7;
 const splineWidth = 2;
@@ -367,13 +374,13 @@ function init() {
     ctx.clearRect(0, 0, width, height);
 
 	image = new Image();
-	image.src = '/resources/img/field.png';
+	image.src = '/resources/img/crescendo.png';
 	image.onload = function() {
 		ctxBackground.drawImage(image, 0, 0, width, height);
 		update();
 	};
-	imageFlipped = new Image();
-	imageFlipped.src = '/resources/img/fieldFlipped.png';
+	imageFlipped = image;
+    // imageFlipped.src = '/resources/img/fieldFlipped.png';
     rebind();
 }
 
