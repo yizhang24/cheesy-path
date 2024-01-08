@@ -8,10 +8,10 @@ let wto;
 let change = "propertychange change click keyup input paste";
 let animating = false;
 
-const fieldWidth = (54 * 12) + (3.25); // inches
-const fieldHeight = (26 * 12) + (11.25); // inches
-const xOffset = 87;
-const yOffset = 15;
+const fieldWidth = 888.000000; // inches
+const fieldHeight = 383.888430; // inches
+const xOffset = 119;
+const yOffset = 18;
 const width = 1656; //pixels
 const height = 715; //pixels
 
@@ -446,9 +446,9 @@ function update() {
 	waypoints = [];
 	let data = "";
 	$('tbody').children('tr').each(function() {
-		let x = parseInt($($($(this).children()).children()[0]).val());
-		let y = parseInt($($($(this).children()).children()[1]).val());
-		let heading = parseInt($($($(this).children()).children()[2]).val());
+		let x = parseFloat($($($(this).children()).children()[0]).val());
+        let y = parseFloat($($($(this).children()).children()[1]).val());
+        let heading = parseFloat($($($(this).children()).children()[2]).val());
 		if (isNaN(heading)) {
 			heading = 0;
         }
