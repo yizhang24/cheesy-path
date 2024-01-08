@@ -409,8 +409,8 @@ function addPoint() {
 	if (waypoints.length > 0) prev = waypoints[waypoints.length - 1].translation;
 	else prev = new Translation2d(50, 50);
 	$("tbody").append("<tr>" + "<td class='drag-handler'></td>"
-        + "<td class='x'><input type='number' value='" + (prev.x + 1) + "'></td>"
-        + "<td class='y'><input type='number' value='" + (prev.y + 1) + "'></td>"
+        + "<td class='x'><input type='number' value='" + ((prev.x + 1 / 39.37)) + "'></td>"
+        + "<td class='y'><input type='number' value='" + ((prev.y + 1) / 39.37) + "'></td>"
         + "<td class='heading'><input type='number' value='0'></td>"
         + "<td class='comments'><input type='search' placeholder='Comments'></td>"
         + "<td class='enabled'><input type='checkbox' checked></td>"
